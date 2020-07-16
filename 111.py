@@ -26,7 +26,7 @@ def drawDigit(d):
     left(180)    
     up()    
     fd(20)
-#绘制当前时间
+#绘制当前
 def drawDate(date):    
     pencolor("red")    
     for i in date:        

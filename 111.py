@@ -1,11 +1,14 @@
-#TempConvert. py
-TempStr = input("靖輸入帯有符号的温度値: ")
+#DayDayUp365.py
+def Dayup(df):
+    dayup = 1.0
+    for i in range(365):
+        if i % 7 in [6,0]:
+            dayup = dayup*(1-0.01)
+        else:
+            dayup = dayup*(1+df)   
+    return(dayup) 
 
-if TempStr[-1] in ['F', 'f']:
-    C = (eval(TempStr[0:-1]) - 32)/1.8
-    print("转换后的温度是{:.2f}C" .format(C))
-elif TempStr[-1] in ['C', 'c']:
-    F = 1.8*eval(TempStr[0:-1]) + 32
-    print("转换后的温度是{:.2f}F" .format(F))
-else:
-    print('输入格式错误')
+dayfactor=0.01
+while Dayup(dayfactor) < 37.78:
+    dayfactor += 0.001
+print("工作日的努力参数是：{:.3f}".format(dayfactor))

@@ -1,6 +1,7 @@
 # coding=UTF-8
-from turtle import *
 from datetime import *
+from turtle import *
+
 
 def Skip(step):               #建立表的外框
     penup()
